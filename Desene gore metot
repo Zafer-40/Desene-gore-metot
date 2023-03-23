@@ -1,0 +1,33 @@
+import java.util.Scanner;
+
+public class Main {
+
+    static void azalan(int a, int b) {
+        if (a > 0) {
+            System.out.print(a + " ");
+            a -= 5;
+            azalan(a, b);
+        } else {
+            artan(a,b);
+        }
+    }
+
+    static void artan(int a, int b) {
+        if (a <= b) {
+            System.out.print(a + " ");
+            a += 5;
+            artan(a, b);
+        }
+    }
+
+        public static void main (String[]args){
+
+            int a, b;
+            Scanner input = new Scanner(System.in);
+
+            System.out.print("N sayısı: ");
+            a = input.nextInt();
+            b = a;
+            azalan(a, b);
+            }
+        }
